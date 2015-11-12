@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="format.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+  <div class="w-nav navigation-bar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+    <div class="container"><a class="w-nav-brand brand-link" href="/"><h1 class="brand-text">Trace</h1></a>
+      <nav class="w-nav-menu navigation-menu" role="navigation"><a class="w-nav-link navigation-link" href="/">Home</a><a class="w-nav-link navigation-link" href="/contact">Contact</a>
+      </nav>
+      <div class="w-nav-button hamburger-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section hero-section centered">
+    <div class="container" data-ix="new-interaction">
+      <h1 class="hero-heading" data-ix="fade-in-bottom-page-loads">This is Trace</h1>
+      <div class="hero-subheading" data-ix="fade-in-bottom-page-loads">A personal belonging Tracking System</div>
+      <div data-ix="fade-in-bottom-page-loads"><a class="button" href="#">Sign Up</a><a class="hollow-button all-caps" href="#">Log In</a>
+      </div>
+    </div>
+  </div>
+  <div class="w-section section">
+    <div class="container">
+      <div class="section-title-group">
+        <h2 class="section-heading centered">Items</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="white-box"><img class="grid-image" src="images/keys.png">
+            <h3>Keys</h3>
+            <p>Date Registered:
+              <br>Device Identifier:
+              <br>Signal Strength:</p>
+            <div class="row">
+              <div class="col-md-6"><a class="w-button" href="#">Turn Off</a>
+              </div>
+              <div class="col-md-6"><a class="w-button" href="#">Alarm On</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="white-box"><img class="grid-image" src="images/wallet.png">
+            <h3>Wallet</h3>
+            <p>Date Registered:
+              <br>Device Identifier:
+              <br>Signal Strength:</p>
+            <div class="row">
+              <div class="col-md-6"><a class="w-button" href="#">Turn Off</a>
+              </div>
+              <div class="col-md-6"><a class="w-button" href="#">Alarm On</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="white-box"><img class="grid-image" src="images/cellphone.png">
+            <h3>Cellphone</h3>
+            <p>Date Registered:
+              <br>Device Identifier:
+              <br>Signal Strength:</p>
+            <div class="row">
+              <div class="col-md-6"><a class="w-button" href="#">Turn Off</a>
+              </div>
+              <div class="col-md-6"><a class="w-button" href="#">Alarm On</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="section-heading centered">&nbsp;</h2>
+    <h2 class="section-heading centered">Register Item</h2>
+    <div class="w-form">
+      <form id="email-form" name="email-form" data-name="Email Form">
+        <label for="name">Name:</label>
+        <input class="w-input" id="name" type="text" placeholder="Enter item name" name="name" data-name="Name">
+        <label for="email">Device Identifier:</label>
+        <input class="w-input" id="email" type="email" placeholder="Enter device identifier" name="email" data-name="Email" required="required">
+        <input class="w-button" type="submit" value="Submit" data-wait="Please wait...">
+      </form>
+      <div class="w-form-done">
+        <p>Thank you! Your submission has been received!</p>
+      </div>
+      <div class="w-form-fail">
+        <p>Oops! Something went wrong while submitting the form</p>
+      </div>
+    </div>
+  </div>
+  <div class="w-section section accent">
+    <div class="container">
+      <div class="section-title-group">
+        <h2 class="section-heading centered white">About Trace</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="white-box transparent"><img class="fullwidth-image" src="images/mac-pro-deck-studio-desk.png">
+            <h3 class="white-text">Overview</h3>
+            <p class="white-text">Trace is a proposed hardware and software solution for the individual concerned with misplacing his or her personal belongings.&nbsp;</p><a class="hollow-button" href="#">Learn more</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="white-box transparent"><img class="fullwidth-image" src="images/350px-ComputerNetwork_small.jpg">
+            <h3 class="white-text">ZigBee</h3>
+            <p class="white-text">Trace leverages the mesh network capabilities of the ZigBee communication protocol to allow the ZigBee-enabled tracking devices to communicate with each other.</p><a class="hollow-button all-caps" href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section footer center">
+    <div class="container">
+      <div class="footer-text">Copyright KHAPE. Made in Webflow.</div>
+    </div>
+  </div>
+</body>
