@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <head>
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="format.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
 </head>
-
 <body>
   <div class="w-nav navigation-bar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
     <div class="container"><a class="w-nav-brand brand-link" href="/"><h1 class="brand-text">Trace</h1></a>
@@ -14,10 +13,12 @@
       </div>
     </div>
   </div>
-  <div class="w-section hero-section small">
+  <div class="w-section hero-section centered">
     <div class="container" data-ix="new-interaction">
-      <h1 class="hero-heading" data-ix="fade-in-bottom-page-loads">Trace</h1>
+      <h1 class="hero-heading" data-ix="fade-in-bottom-page-loads">This is Trace</h1>
       <div class="hero-subheading" data-ix="fade-in-bottom-page-loads">A personal belonging Tracking System</div>
+      <div data-ix="fade-in-bottom-page-loads"><a class="button" href="#">Sign Up</a><a class="hollow-button all-caps" href="#">Log In</a>
+      </div>
     </div>
   </div>
   <div class="w-section section">

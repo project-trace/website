@@ -164,6 +164,16 @@ p {
   background-size: auto, cover;
   text-align: center;
 }
+.hero-section.small {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 4px solid #69b9ff;
+  background-image: -webkit-linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('images/trees.png');
+  background-image: linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('images/trees.png');
+  background-position: 0% 0%, 50% 50%;
+  background-size: auto, cover;
+  text-align: center;
+}
 .hero-heading {
   margin-bottom: 30px;
   color: white;
