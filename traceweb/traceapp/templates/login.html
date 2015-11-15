@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <head>
-  <link rel="stylesheet" href="format.css">
-  <link rel="stylesheet" href="bootstrap.min.css">
+  {% load staticfiles %} 
+  <link rel="stylesheet" href="{% static 'traceapp/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'traceapp/css/format.css' %}">
 </head>
 <body>
   <div class="w-nav navigation-bar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
@@ -28,13 +29,13 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="white-box transparent"><img class="fullwidth-image" src="images/mac-pro-deck-studio-desk.png">
+          <div class="white-box transparent"><img class="fullwidth-image" src="{% static 'traceapp/img/desk.png' %}">
             <h3 class="white-text">Overview</h3>
             <p class="white-text">Trace is a proposed hardware and software solution for the individual concerned with misplacing his or her personal belongings.&nbsp;</p><a class="hollow-button" href="#">Learn more</a>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="white-box transparent"><img class="fullwidth-image" src="images/350px-ComputerNetwork_small.jpg">
+          <div class="white-box transparent"><img class="fullwidth-image" src="{% static 'traceapp/img/comp_network.jpg' %}">
             <h3 class="white-text">ZigBee</h3>
             <p class="white-text">Trace leverages the mesh network capabilities of the ZigBee communication protocol to allow the ZigBee-enabled tracking devices to communicate with each other.</p><a class="hollow-button all-caps" href="#">Learn more</a>
           </div>
