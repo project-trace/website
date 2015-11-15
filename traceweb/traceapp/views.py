@@ -24,15 +24,18 @@ def loginUser(request):
         return render(request, 'already_logged_in.html', {'user_name': request.user.username})
     if user is not None:
         login(request, user)
-    else:
+    #else:
         #return render(request,'invalid_login.html')
 
-@require_http_methods(["POST"])
-def createUser(request):
-    data = request.POST
-    try:
-        user = User.objects.create_user(username=data['userName'], email=data['email'], password=data['passWord'])
-        user.save()
+#@require_http_methods(["POST"])
+#def createUser(request):
+#    data = request.POST
+#    try:
+#        user = User.objects.create_user(username=data['userName'], email=data['email'], password=data['passWord'])
+#        user.save()
         #return render(request, 'user_created.html')
-    except:
-       # return render(request, 'invalid_user_creation.html')
+    #except:
+    # return render(request, 'invalid_user_creation.html')
+
+def home(request):
+    return render(request, 'home.html')
