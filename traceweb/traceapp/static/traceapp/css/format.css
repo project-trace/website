@@ -158,8 +158,8 @@ p {
   padding-top: 195px;
   padding-bottom: 195px;
   border-bottom: 4px solid #69b9ff;
-  background-image: -webkit-linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('/img/trees.png');
-  background-image: linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('/img/trees.png');
+  background-image: -webkit-linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('../img/trees.png');
+  background-image: linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('../img/trees.png');
   background-position: 0% 0%, 50% 50%;
   background-size: auto, cover;
   text-align: center;
@@ -168,8 +168,8 @@ p {
     padding-top: 40px;
     padding-bottom: 40px;
     border-bottom: 4px solid #69b9ff;
-  background-image: -webkit-linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('/img/trees.png');
-  background-image: linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('/img/trees.png');
+  background-image: -webkit-linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('../img/trees.png');
+  background-image: linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('../img/trees.png');
   background-position: 0% 0%, 50% 50%;
   background-size: auto, cover;
   text-align: center;
