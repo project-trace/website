@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'traceapp/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'traceapp/css/format.css' %}">
+</head>
+
+<body>
+
+<form id="login-form" name="login-form" data-name="Login Form">
+        <div style="text-align: center"><div class="container" style="width: 28%">
+		  <div style="float: left"><label for="name">Username:</label></div>
+          <div style="float: right"><input class="w-input" id="name" type="text" placeholder="Enter item name" name="name" data-name="Name"></div></div></div>
+		<div style="text-align: center"><div class="container" style="width: 28%">
+          <div style="float: left"><label for="email">Password:</label></div>
+          <div style="float: right"><input class="w-input" id="email" type="email" placeholder="Enter device identifier" name="email" data-name="Email" required="required"></div></div></div>
+          <div style="text-align: center"><input class="w-button" type="submit" value="Submit" data-wait="Please wait..."></div>
+        </div>
+	  </form>
+</body>
+

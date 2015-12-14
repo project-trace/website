@@ -54,7 +54,7 @@ def signUp(request):
 def regItem(request):
 	itemName = request.GET.get('itemName')
 	itemID = request.GET.get('itemID')
-	if(itemName=="" or itemID==""):
+	if(itemName=="" || itemID==""):
 		return HttpResponse('invalid')
 	try:
 		device = Device.objects.create(name=itemName, device_id=itemID)

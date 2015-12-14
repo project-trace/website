@@ -1,0 +1,13 @@
+hello
+
+username = request.POST['username']
+    password = request.POST['password']
+ user = authenticate(username=username, password=password)
+    if request.user.is_authenticated():
+        #return render(request, 'already_logged_in.html', {'user_name': request.user.username})
+		return "OK";
+    if user is not None:
+        login(request, user)
+    else:
+        #return render(request,'invalid_login.html')
+		return "OK";

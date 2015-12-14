@@ -108,19 +108,12 @@ p {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   color: #676770;
-  vertical-align: middle;
-  font-family:'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 20px;
- 
 }
 .navigation-link:hover {
   color: #2e9dff;
 }
 .navigation-bar {
   background-color: white;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 .brand-text {
   margin-top: 0px;
@@ -165,18 +158,8 @@ p {
   padding-top: 195px;
   padding-bottom: 195px;
   border-bottom: 4px solid #69b9ff;
-  background-image: -webkit-linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('../img/trees.png');
-  background-image: linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('../img/trees.png');
-  background-position: 0% 0%, 50% 50%;
-  background-size: auto, cover;
-  text-align: center;
-}
-.hero-section.small {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border-bottom: 4px solid #69b9ff;
-  background-image: -webkit-linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('../img/trees.png');
-  background-image: linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('../img/trees.png');
+  background-image: -webkit-linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('../images/photo-1416359658663-73a3834895eb.jpg');
+  background-image: linear-gradient(rgba(46, 157, 255, 0.49), rgba(46, 157, 255, 0.2)), url('../images/photo-1416359658663-73a3834895eb.jpg');
   background-position: 0% 0%, 50% 50%;
   background-size: auto, cover;
   text-align: center;
@@ -377,8 +360,7 @@ html.w-mod-js *[data-ix="scale-on-scroll"] {
     background-color: #3b99d9;
   }
   .navigation-menu {
-	text-align: right;
-    background-color: #3b9000;
+    background-color: #3b99d9;
   }
   .hero-section.centered {
     padding-top: 144px;

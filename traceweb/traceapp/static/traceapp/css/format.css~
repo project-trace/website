@@ -133,6 +133,17 @@ p {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
+.form-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family:'Open Sans', sans-serif;
+  color: #69b9ff;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 .brand-link {
   padding-top: 16px;
   padding-bottom: 16px;
@@ -194,6 +205,15 @@ p {
   margin-bottom: 40px;
   color: #2e9dff;
   font-size: 25px;
+  line-height: 25px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.form-input {
+  margin-bottom: 40px;
+  color: #2e9dff;
+  font-size: 18px;
   line-height: 25px;
   font-weight: 300;
   letter-spacing: 3px;

@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs">
+  <li class = "active"><a href="#">Login</a></li>
+  <li><a href="#">Registration</a></li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane active" id="tab1">
+    {{ login_form }}
+  </div>
+  <div class="tab-pane" id="tab2">
+    {{ user_creation_form }}
+  </div>
+</div>
