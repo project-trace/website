@@ -54,7 +54,7 @@ def signUp(request):
 def regItem(request):
 	itemName = request.GET.get('itemName')
 	itemID = request.GET.get('itemID')
-	if(itemName=="" || itemID==""):
+	if(itemName=="" or itemID==""):
 		return HttpResponse('invalid')
 	try:
 		device = Device.objects.create(name=itemName, device_id=itemID)
@@ -72,5 +72,8 @@ def logout(request):
 	return render(request, 'logout.html')
 
 def loginHome(request):
+	if(request.user.username is not None):
+		query_results = Device.objects.all()
+		return render(request, 'home.html', {'username': request.user.username, 'query_results': query_results})
 	return render(request, 'login.html')
 

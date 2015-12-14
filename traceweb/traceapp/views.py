@@ -72,5 +72,8 @@ def logout(request):
 	return render(request, 'logout.html')
 
 def loginHome(request):
+	if(request.user.username !=""):
+		query_results = Device.objects.all()
+		return render(request, 'home.html', {'username': request.user.username, 'query_results': query_results})
 	return render(request, 'login.html')
 
