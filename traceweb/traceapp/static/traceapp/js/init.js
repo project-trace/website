@@ -66,7 +66,7 @@ $.ajax({
 	beforeSend: function(data){
 		processing_reg = true;
 	},
-    url: 'http://localhost:8000/signUp',  // Send the login info to this page
+    url: 'http://localhost:8000/signUp',  // Send the info to this page
 	data: {username: daform_reg.elements["username"].value, password: daform_reg.elements["password"].value, first_name: daform_reg.elements["first_name"].value, last_name: daform_reg.elements["last_name"].value },
     success: function(data){
 		if(data=="valid"){

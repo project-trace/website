@@ -53,19 +53,40 @@ def signUp(request):
 
 def regItem(request):
 	itemName = request.GET.get('itemName')
-	itemID = request.GET.get('itemID')
-	if(itemName=="" or itemID==""):
+	itemDes = request.GET.get('itemDes')
+	itemImg = request.GET.get('itemImg')
+	if(itemName=="" or itemDes==""):
 		return HttpResponse('invalid')
 	try:
-		device = Device.objects.create(name=itemName, device_id=itemID)
+		device = Device.objects.create(name=itemName, des=itemDes, img=itemImg, device_id="")
 		device.save();
 		return HttpResponse('valid')
 	except:
 		return HttpResponse('invalid')
 
-def home(request, userId):
+def disable(request, name):
+	query_result = Device.objects.get(name=name)
+	print query_result.enabled
+	if(query_result.enabled == "1"):
+		query_result.enabled = "0"
+		query_result.button = "Enable"
+		query_result.style = "opacity: 0.5; alpha(opacity=50)"
+	else:
+		query_result.enabled = "1"
+		query_result.button = "Disable"
+		query_result.style = ""
+	query_result.save()
+	print query_result.enabled
 	query_results = Device.objects.all()
-	return render(request, 'home.html', {'username': request.user.username, 'query_results': query_results})
+	c = RequestContext(request, {'username': request.user.username, 'query_results': query_results,})
+	return render(request, 'home.html', {'username': request.user.username, 'query_results': query_results,})
+
+def home(request, userId):
+	if(request.user.username !=""):
+		query_results = Device.objects.all()
+		return render(request, 'home.html', {'username': request.user.username, 'query_results': query_results})
+	else:
+		return render(request, 'login.html')
 
 def logout(request):
 	auth.logout(request)

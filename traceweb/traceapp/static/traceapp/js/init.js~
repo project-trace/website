@@ -71,6 +71,7 @@ $.ajax({
     success: function(data){
 		if(data=="valid"){
 			alert("User was created");
+			window.location='http://localhost:8000/';			
 		}else if(data=="invalid"){
 			alert("User was not created, try again");
 		}
