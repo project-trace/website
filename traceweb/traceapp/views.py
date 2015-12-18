@@ -13,6 +13,7 @@ from django.contrib.auth.decorators import login_required
 from subprocess import call
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.db import models
+import os
 import string
 
 
@@ -58,8 +59,12 @@ def regItem(request):
 	if(itemName=="" or itemDes==""):
 		return HttpResponse('invalid')
 	try:
-		device = Device.objects.create(name=itemName, des=itemDes, img=itemImg, device_id="")
-		device.save();
+		#os.system("sudo python traceapp/serial_coordinator.py")
+		module_dir = os.path.dirname(__file__)		
+		file_path = open(os.path.join(module_dir, 'macAddress.txt'))
+		var = file_path.read()
+		device = Device.objects.create(name=itemName, des=itemDes, img=itemImg, device_id=var )
+		device.save()
 		return HttpResponse('valid')
 	except:
 		return HttpResponse('invalid')

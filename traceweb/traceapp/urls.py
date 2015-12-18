@@ -11,4 +11,5 @@ urlpatterns = patterns('',
 					  url(r'^regItem$', views.regItem, name='regItem'),
 					  url(r'^disable(?P<name>[^/]+)$', views.disable, name='disable'),
 					  url(r'^(?P<userId>[^/]+)/?$', views.home, name='home'),
+
 )

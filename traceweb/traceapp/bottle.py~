@@ -1,0 +1,16 @@
+from bottle import route, run, static_file, post, request
+   
+ @route('/js/<filename>')
+    def js(filename):
+        return static_file(filename, root='js')
+
+    @route('/')
+    def index():return static_file('tst.html', root='./')
+
+    @post('/xml')
+    def xml():
+        for x in request.forms:
+            print(x)
+        return {'return': 'accepted'}
+
+    run(host='0.0.0.0', port=8000)

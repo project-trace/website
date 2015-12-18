@@ -66,7 +66,7 @@ $.ajax({
 	beforeSend: function(data){
 		processing_reg = true;
 	},
-    url: 'http://localhost:8000/signUp',  // Send the login info to this page
+    url: 'http://localhost:8000/signUp',  // Send the info to this page
 	data: {username: daform_reg.elements["username"].value, password: daform_reg.elements["password"].value, first_name: daform_reg.elements["first_name"].value, last_name: daform_reg.elements["last_name"].value },
     success: function(data){
 		if(data=="valid"){
@@ -89,4 +89,38 @@ return false;
 
 
 });
+
+var processing_disable = false;
+// When the form is submitted
+$("#disable").click(function(){ 
+// -- Start AJAX Call --
+ if(processing_disable) {
+        return false;
+    }
+processing_disable = true;
+$.ajax({ 
+	beforeSend: function(data){
+		processing_disable = true;
+	},
+    url: '../../../../../serial_coordinator.py',  // Send the info to this page
+	type: 'POST'
+	data: json,
+	dataType: 'json'
+    success: function(ret){
+		alert(ret['return']);
+	},
+    failure: function(data){
+		alert('Got an error');
+	}
+  }); 
+   
+// -- End AJAX Call --
+ 
+return false;
+ 
+}); // end submit event
+
+
+});
+
 

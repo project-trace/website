@@ -38,7 +38,7 @@
             <h3>{{item.name}}</h3>
             <p>Description:&nbsp{{item.des}}</p>
 			<p>Device ID:&nbsp{{item.device_id}}</p>
-              <div><a class="button" href="/disable{{item.name}}" onclick="disable('{{item.name}}')">{{item.button}}</a></div>
+              <div><a class="button" href="/disable{{item.name}}" id="disable" >{{item.button}}</a></div>
           </div><br/><br/>
         </div>
 		{% endfor %}
@@ -65,7 +65,7 @@
 			<input class="w-input" id="bag" type="radio" name="group1" value="bag">Bag
 			<input class="w-input" id="other" type="radio" name="group1" value="other">Other
 			</div></div></div></div><br/>
-          <div style="text-align: center"><input class="button" id="itemreg_submit" type="submit" value="Submit" data-wait="Please wait..."></div><br/><br/>
+          <div style="text-align: center"><input class="button" id="itemreg_submit" type="submit" value="Submit"></div><br/><br/>
         </div>
 	  </form>
     </div>
@@ -86,7 +86,7 @@
           <div class="white-box transparent"><img class="fullwidth-image" src="{% static 'traceapp/img/comp_network.jpg' %}">
             <h3 class="white-text">ZigBee</h3>
             <p class="white-text">Trace leverages the mesh network capabilities of the ZigBee communication protocol to allow the ZigBee-enabled tracking devices to communicate with each other.</p><a class="hollow-button all-caps" href="#">Learn more</a>
-          </div>Disable
+          </div>
         </div>
       </div>
     </div>
@@ -99,13 +99,3 @@
 </body>
 
 <script type="text/javascript" src="{% static 'traceapp/js/init_home.js' %}"></script>
-<script type="text/javascript">
-function disable(name){	
-	var text = "text_"+name;
-	var pic = "pic_"+name;
-	document.getElementById(text).style.opacity = "0.4";
-	document.getElementById(text).style.filter = "alpha(opacity=40)";
-	document.getElementById(pic).style.opacity = "0.4";
-	document.getElementById(pic).style.filter = "alpha(opacity=40)";
-}
-</script>

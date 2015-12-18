@@ -8,12 +8,12 @@ from django.core.servers.basehttp import FileWrapper
 from django.template import RequestContext, loader
 from django.core.context_processors import csrf
 from django.contrib import auth
-from django.template import RequestContext, loader
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from subprocess import call
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.db import models
+import os
 import string
 
 
@@ -59,8 +59,13 @@ def regItem(request):
 	if(itemName=="" or itemDes==""):
 		return HttpResponse('invalid')
 	try:
+		#os.system("sudo python traceapp/serial_coordinator.py")
+		module_dir = os.path.dirname(__file__)		
+		file_path = open(os.path.join(module_dir, 'macAddress.txt'))
+		var = file_path.read()
+		print var
 		device = Device.objects.create(name=itemName, des=itemDes, img=itemImg, device_id="")
-		device.save();
+		device.save()
 		return HttpResponse('valid')
 	except:
 		return HttpResponse('invalid')
@@ -79,9 +84,8 @@ def disable(request, name):
 	query_result.save()
 	print query_result.enabled
 	query_results = Device.objects.all()
-	t = loader.get_template('home.html')	
 	c = RequestContext(request, {'username': request.user.username, 'query_results': query_results,})
-	return HttpResponse (t.render(c))
+	return render(request, 'home.html', {'username': request.user.username, 'query_results': query_results,})
 
 def home(request, userId):
 	if(request.user.username !=""):

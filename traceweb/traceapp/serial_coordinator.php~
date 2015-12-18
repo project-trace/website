@@ -1,0 +1,4 @@
+<?php
+exec('hi world');
+//exec('python /serial_coordinator.py');
+?>
